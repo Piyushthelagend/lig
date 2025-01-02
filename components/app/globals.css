@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Acquire Bold';
+  src: url('/Fonts/AquireBold-8Ma60.woff') format('woff'),
+
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  color: #fff;
+  user-select: none;
+  }
+  body{
+    background: linear-gradient(to right, black, #1a202c, black);
+  }
+  /* Dark-themed scrollbar styling */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background for scrollbar track */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #3b3b3b; /* Darker gray for scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #1a1a1a; /* Creates a gap around the thumb */
+  }
+  
+  /* Hover effect for scrollbar thumb */
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #5a5a5a; /* Slightly lighter gray on hover */
+  }
+  
+  /* Firefox scrollbar styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3b3b3b #1a1a1a; /* Thumb and track color for Firefox */
+  }
+  
+  li.g-middel-width{
+    width: calc(100%/2);
+}
+body{
+  background-color:  #020617;
+}
+.lig-global-width{
+    width: calc(100%/3);
+}
+/* General Layout */
+.lig-web-editor {
+    display: flex;
+    height: 100vh;
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+  }
+  
+  /* Left and Right Sidebars */
+  .lig-left-sidebar,
+  .lig-right-sidebar {
+    width: 200px;
+    background-color: #2a2a3c;
+    padding: 10px;
+    border: 1px solid #3c3c4f;
+  }
+  
+  .lig-left-sidebar button,
+  .lig-right-sidebar button {
+    background-color: #3a3a4c;
+    color: #e0e0e0;
+    border: none;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .lig-left-sidebar button:hover,
+  .lig-right-sidebar button:hover {
+    background-color: #4a4a6a;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  #logo {
+    background-image: url('/levizr_logo_sky.png'); /* Use the logo with white color */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px; /* Adjust the width of the logo */
+    height: 100px; /* Adjust the height of the logo */
+}
+
+
+  /* Tree View */
+  .lig-tree div {
+    padding: 5px;
+    border: 1px solid #3c3c4f;
+    margin: 5px 0;
+    background-color: #3a3a4c;
+    border-radius: 4px;
+    color: #e0e0e0;
+  }
+  
+  .lig-tree div:hover {
+    background-color: #4a4a6a;
+  }
+  
+  /* Editor Area */
+  .lig-editor-area {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #3c3c4f;
+    min-height: 100%;
+    background-color: #2a2a3c;
+    border-radius: 4px;
+  }
+  
+  .lig-editor-area h1,
+  .lig-editor-area p,
+  .lig-editor-area button {
+    color: #e0e0e0;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+  }
+  
+  .lig-editor-area button {
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #3a3a4c;
+    border: 1px solid #4a4a6a;
+    border-radius: 4px;
+  }
+  
+  .lig-editor-area button:hover {
+    background-color: #4a4a6a;
+  }
+  
+  /* Highlighted Element */
+  .lig-highlight {
+    border: 2px dotted #00bcd4;
+    background-color: rgba(0, 188, 212, 0.lig-1);
+  }
+  
+  /* Draggable Elements */
+  .lig-draggable {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #4a4a6a;
+    background-color: #3a3a4c;
+    border-radius: 4px;
+    cursor: move;
+  }
+  
+  .lig-draggable:hover {
+    background-color: #4a4a6a;
+  }
+  
+  /* Dropdown */
+  select {
+    background-color: #3a3a4c;
+    color: #e0e0e0;
+    border: 1px solid #4a4a6a;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  select:hover {
+    background-color: #4a4a6a;
+  }
+  
+  select option {
+    background-color: #3a3a4c;
+    color: #e0e0e0;
+  }
+  .lig-tab button {
+    opacity: 0;
+    visibility: hidden;
+    /* transition: opacity 0.lig-1s ease-in-out-in-out, visibility 0.lig-1s ease-in-out-in-out; */
+    /* position: absolute; */
+  }
+  
+  .lig-tab:hover button {
+    /* position: unset; */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+
+/* Basic grid layout for images */
+.lig-image-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Image styling */
+.lig-image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Image Grid Item */
+.lig-image-grid-item-free {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  border-radius: 12px;
+}
+.lig-image-grid-item-premium {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  border-radius: 12px;
+}
+
+.lig-img:hover img{
+  transform: scale(1.lig-05);
+  border-radius: unset;
+}
+
+/* Dialog Overlay with Blur Effect */
+.lig-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lig-no-scroll {
+  overflow: hidden;
+}
+
+/* Dialog Box */
+.lig-dialog-box {
+  position: fixed;
+  margin: auto;
+  width: 90%;
+  height: 800px;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.lig-1s ease-in-out;
+  border-radius: 12px;
+}
+
+/* Close Button */
+.lig-dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.lig-1s ease-in-out;
+}
+
+.lig-dialog-close:hover {
+  background: rgba(255, 255, 255, 1);
+}
+.lig-fade{
+  animation: fadeIn 0.lig-1s ease-in-out;
+}
+
+
+.lig-dialog-image {
+  border-radius: 12px;
+}
+
+
+
+/* Animations */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+.lig-dialog-title {
+  font-size: 20px;
+}
+
+.lig-dialog-prompt {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 20px;
+}
+.lig-dialog-image {
+  max-width: 100%;
+  border-radius: 8px;
+} 
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.lig-loading {
+  background: linear-gradient(
+    100deg,
+    rgba(200, 200, 200, 0.2) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(200, 200, 200, 0.2) 80%
+  );
+  background-size: 200% 100%;
+  animation: shine 3s linear infinite reverse;
+  border-radius: 8px; /* Optional: for rounded edges */
+}
+.lig-iconic-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding:  2%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(to right, #2806e4,#130fe7, #6366f1);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.lig-iconic-button:hover {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.lig-button-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease;
+}
+
+.lig-iconic-button:hover .lig-button-icon {
+  stroke: #e0e7ff;
+}
+.lig-login-button, .lig-signup-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.lig-login-button:hover {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px); 
+}
+
+.lig-signup-button {
+  background-color: #2196f3; /* Blue background for signup */
+}
+
+.lig-signup-button:hover {
+  background-color: #1976d2; /* Slightly darker blue on hover */
+}
+
+.lig-button-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.lig-button-normal{
+  border-radius: 12px;
+  display: flex;
+}
+.lig-bg-shine{
+  background: linear-gradient(to right, black, #1a202c, black);
+}
+.lig-get{
+  padding: unset;
+  height: 50px;
+  width: 130%;
+}
+
+.premium-grid-item {
+  border: 4px solid gold;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+.regular-grid-item {
+  border: 2px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .nav-btn-mob {
+    display: none;
+  }
+}
+
+
+@media (max-width: 570px) {
+  .nav-btn {
+      display: none;
+  }
+  .nav-btn-mob {
+    display: flex;
+}
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Twinkling Stars */
+
+.twinkle{
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+.star {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}

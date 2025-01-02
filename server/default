@@ -1,0 +1,38 @@
+server {
+    listen 80;
+    server_name levizr.com www.levizr.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000; # Proxy to your app running on port 3000
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+        # WebSocket support
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        root /usr/share/nginx/html; # Adjust if you have a custom 404 page
+    }
+
+    # Serve static files
+    location /_next/static/ {
+        alias /home/ubuntu/levizr_image_generator/.next/static/;
+        expires 1y;
+        access_log off;
+    }
+
+    client_max_body_size 50M; # Adjust if large files are uploaded
+}
+
+# Optional: Redirect www to non-www (uncomment to enable)
+# server {
+#     listen 80;
+#     server_name www.levizr.com;
+#     return 301 http://levizr.com$request_uri;
+# }

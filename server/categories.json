@@ -1,0 +1,115 @@
+{
+    "categories": {
+      "NatureAndLandscapes": [
+        "Mountains",
+        "Forests",
+        "Beaches",
+        "Deserts",
+        "Waterfalls",
+        "SunsetsSunrises",
+        "Wildlife",
+        "Sky"
+      ],
+      "PeopleAndPortraits": [
+        "Family",
+        "Friends",
+        "Selfies",
+        "Couples",
+        "CulturalPortraits",
+        "FashionPhotography",
+        "Events"
+      ],
+      "Animals": [
+        "Pets",
+        "Birds",
+        "AquaticAnimals",
+        "WildAnimals",
+        "Insects",
+        "FarmAnimals"
+      ],
+      "ArchitectureAndUrban": [
+        "HistoricalBuildings",
+        "ModernArchitecture",
+        "Bridges",
+        "Cityscapes",
+        "Interiors",
+        "StreetsAndAlleys"
+      ],
+      "Travel": [
+        "Destinations",
+        "Monuments",
+        "AdventureTrips",
+        "RoadTrips",
+        "CulturalFestivals"
+      ],
+      "ArtAndCreativity": [
+        "Abstract",
+        "DrawingsAndSketches",
+        "DigitalArt",
+        "Graffiti",
+        "Sculptures",
+        "Paintings"
+      ],
+      "FoodAndDrink": [
+        "Desserts",
+        "Beverages",
+        "StreetFood",
+        "HomeCookedMeals",
+        "ExoticCuisines"
+      ],
+      "Technology": [
+        "Gadgets",
+        "Vehicles",
+        "Drones",
+        "Robotics",
+        "FactoriesAndIndustrial"
+      ],
+      "SportsAndActivities": [
+        "OutdoorSports",
+        "IndoorSports",
+        "AdventureSports",
+        "GymAndFitness",
+        "HikingAndCamping"
+      ],
+      "FashionAndLifestyle": [
+        "Clothing",
+        "Accessories",
+        "Makeup",
+        "HomeDecor",
+        "WellnessAndSpa"
+      ],
+      "AbstractAndAesthetic": [
+        "Patterns",
+        "Minimalistic",
+        "Textures",
+        "LightAndShadows",
+        "GeometricShapes"
+      ],
+      "Seasons": [
+        "Spring",
+        "Summer",
+        "Autumn",
+        "Winter",
+        "SeasonalHolidays"
+      ],
+      "FantasyAndMythology": [
+        "FantasyCreatures",
+        "MythicalThemes",
+        "Cosplay",
+        "ConceptArt"
+      ],
+      "ScienceAndSpace": [
+        "Astronomy",
+        "MicroscopicViews",
+        "ScientificInstruments",
+        "SpaceExploration"
+      ],
+      "Miscellaneous": [
+        "BlackAndWhitePhotography",
+        "VintageAndRetro",
+        "CloseUpsAndMacro",
+        "EverydayObjects"
+      ]
+    }
+  }
+  

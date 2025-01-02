@@ -1,0 +1,8 @@
+aiohttp
+flask
+flask-cors
+gradio-client
+requirements-parser
+pymongo
+pillow
+requests
